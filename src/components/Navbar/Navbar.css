@@ -1,0 +1,215 @@
+ @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+.n-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  top: 0;
+
+}
+.n-left {
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Playwrite CU", cursive;
+}
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+}
+
+.n-list {
+  flex: 10;
+}
+.n-list > ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list > ul :hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.n-button {
+  flex: 2;
+}
+
+.n-list > ul li {
+  position: relative;
+}
+
+.n-list > ul li a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.n-list > ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--orange);
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.n-list > ul li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--orange);
+}
+
+/* @media screen and (max-width: 480px) {
+  .n-list {
+    display: none;
+  }
+  .n-left {
+    flex: 2;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+  }
+
+  .n-left .n-name {
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+  
+  .n-button {
+    font-size: 10px;
+  }
+} */
+ 
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  /* Hide the normal navigation list */
+  .n-list {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    flex-direction: column; /* Vertical layout */
+    gap: 1rem;
+    z-index: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  /* Show the navigation list when the menu is open */
+  .n-list.open {
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout when open */
+    align-items: flex-start; /* Center the items vertically */
+  }
+
+  /* Ensure the links are displayed vertically */
+  .n-list ul {
+    display: flex;
+    flex-direction: column; /* Vertical layout for list */
+    gap: 1rem; /* Add space between items */
+    padding: 0;
+    margin: 0;
+  }
+
+  .n-list ul li {
+    list-style: none;
+  }
+
+  .n-list ul li a {
+    text-decoration: none;
+    color: black; /* Adjust as per your theme */
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Dark/Light Mode Toggle adjustments */
+  .n-list .toggle {
+    display: block;
+    margin: 1.5rem 0; /* Add margin to separate from other items */
+    padding: 0.5rem;
+    background-color: #f0f0f0; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text or icon */
+    width: 80%; /* Make it a bit wider on mobile */
+    max-width: 200px;
+  }
+
+  /* Hamburger icon for mobile view */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  
+  }
+
+  .menu span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color:var(--orange);
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger icon turns into "X" when menu is open */
+  .menu.open span:nth-child(1) {
+    transform: rotate(40deg) translate(5px, 6px);
+  }
+
+  .menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu.open span:nth-child(3) {
+    transform: rotate(-40deg) translate(5px, -5px);
+  }
+
+  /* Adjustments for the left section */
+  .n-left {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Name font size adjustment for smaller screens */
+  .n-left .n-name {
+    font-size: 13.5px;
+    font-weight: 700;
+  }
+
+  /* Contact button size adjustment for mobile */
+  .n-button {
+    font-size: 50px;
+    margin: 0.2rem 0.4rem 0 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  align-items: center;
+  margin: -0.5rem -3.5rem;
+  position: relative;
+  margin-top: 5rem;
+  height: 8rem;
+  padding-bottom: 2rem;
+
+
+}
+.f-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* margin-top: 4rem; */
+  gap: 1rem;
+
+  color: white;
+}
+.f-icons {
+  display: flex;
+  gap: 2rem;
+}
+.f-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.f-icons a:hover {
+  transform: scale(1.1);
+}
+
+.f-icons a:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.753);
+}
+
+@media screen and (max-width: 480px) {
+  .f-content {
+    transform: scale(0.5);
+  }
+}

@@ -1,0 +1,213 @@
+.Intro {
+  display: flex;
+  height: 77vh;
+  margin-top:6rem;
+
+}
+
+/* left side styling */
+.i-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+.i-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.i-name > :nth-child(1) {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.i-name > :nth-child(2) {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.i-name > :nth-child(3) {
+  font-weight: 100;
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 10px;
+}
+.i-button {
+  width: 6rem;
+  height: 2rem;
+}
+.i-icons {
+  margin-top: 2rem;
+  display: flex;
+}
+.i-icons > * {
+  transform: scale(0.5);
+}
+.i-icons > *:hover {
+  cursor: pointer;
+}
+.i-icons a:nth-of-type(1){
+  color: #FF7F50;
+}
+
+/* right side styling */
+.i-right {
+  flex: 1;
+  position: relative;
+}
+.i-right > * {
+  position: absolute;
+  z-index: 1;
+}
+.i-right .floatingdiv{
+
+  width: 100px;
+  height: 20px;
+
+}
+
+
+/* .i-right > :nth-child(1) {
+  transform: scale(0.69);
+  left: -15%;
+  top: -9%;
+}
+.i-right > :nth-child(2) {
+  top: -4.6rem;
+  transform: scale(0.67);
+  left: -3rem;
+} */
+.i-right img {
+  /* transform: scale(1.4);
+  left: 28%; */
+  transform: scale(0.59);
+  left: -20%;
+  top: -55%;
+}
+/* .i-right > :nth-child(2) {
+  transform: scale(0.62);
+  top: -19%;
+  left: -24%;
+  border-radius: 60%;
+  padding: 0;
+} */
+
+/* General styling */
+.social-icon img {
+  width: 120px; /* Base size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover and click animations */
+.social-icon img:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  /* Add shadow */
+}
+
+.social-icon img:active {
+  transform: scale(0.9); /* Slightly decrease size on click */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Reduce shadow */
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(12deg); }
+  50% { transform: rotate(-8deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-emoji {
+  display: inline-block;
+  font-size: 1.5rem; /* Adjust size as needed */
+  animation: wave 2s infinite ease-in-out; /* Apply the waving animation */
+  transform-origin: bottom center; /* Set the origin point to bottom of emoji for natural wave */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .i-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .social-icon img {
+    width: 60px; /* Adjust size for tablets and small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon img {
+    width: 70px; /* Adjust size for mobile devices */
+  }
+}
+
+/* Center icons and space them out */
+.social-icon {
+  display: inline-block;
+  margin: 0 10px; /* Space between icons */
+}
+
+.social-icons-container {
+  text-align: center; /* Center the icons */
+  padding: 20px 0; /* Add some padding */
+}
+
+/* blur */
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(212px);
+  z-index: -9;
+  top: -18%;
+  left: 56%;
+  filter: blur(72px);
+}
+
+@media screen and (max-width: 480px) {
+  .Intro {
+    flex-direction: column;
+    gap: 7rem;
+    height: 64rem;
+  }
+  .i-name > :nth-child(1) {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .i-name > :nth-child(2) {
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .i-name > :nth-child(3) {
+    color: var(--gray);
+
+    font-size: 16px;
+  }
+
+  .i-right {
+    transform: scale(0.8);
+    left: -3rem;
+  }
+  .i-right .blur {
+    display: none;
+  }
+
+  .i-right .boy{
+    margin-left: -75px;
+  }
+  .floating-div:nth-of-type(1) {
+    /* display: none; */
+    top: -6em !important;
+  }
+}

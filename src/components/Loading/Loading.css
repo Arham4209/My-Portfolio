@@ -1,0 +1,13 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* or any color you like */
+    color: #fff; /* or any color you like */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Make sure it appears above everything else */
+  }

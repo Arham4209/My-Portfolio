@@ -1,0 +1,63 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  /* Dark mode styles */
+  color: var(--black);
+
+}
+.experience .pro{
+  display: flex;
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+}
+
+.progress-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  
+}
+
+@media (max-width: 480px) {
+  .experience, .skills, .skill {
+    padding: 0.2rem;
+  
+  }
+
+  .skills{
+    gap: 0.5rem;
+  }
+.experience .pro{
+  font-size: 1.5rem;
+  font-weight: 600;
+
+}
+  .progress-text {
+    font-size: 0.6rem; /* Reduce font size to fit better */
+    margin-top: 0.3rem;
+  }
+
+  .skill {
+    width: 100%; /* Ensure skill takes up full width */
+  }
+}
